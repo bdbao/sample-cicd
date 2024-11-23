@@ -24,3 +24,15 @@ kubectl get deployments
 kubectl get services
 minikube ip # 192.168.49.2
 http://192.168.49.2:30001/books
+
+cd Books
+git init
+git remote add origin https://github.com/bdbao/sample-cicd.git
+git add .
+git commit -m "init: Initial commit"
+git push -u origin main
+
+# Re-apply because change k8s yml file
+kubectl get pods
+kubectl delete pod --all
+kubectl apply -f k8s/deployment.yaml

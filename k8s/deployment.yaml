@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ci-cd-project
-        image: username/ci-cd-project:latest
+        image: bdbao24/ci-cd-project:latest
         ports:
         - containerPort: 3000
 ---
