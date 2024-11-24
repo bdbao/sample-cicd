@@ -14,9 +14,13 @@ docker tag ci-cd-project bdbao24/ci-cd-project:latest
 docker push bdbao24/ci-cd-project:latest
 
 docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
-http://localhost:8080 # ex pass: 599822ed6a534e3f96fb758b6469bde9
+http://localhost:8080 # ex pass: admin/599822ed6a534e3f96fb758b6469bde9
 
 (brew install minikube)
+
+
+Again: cd Books, start 3 containers
+
 minikube start
 kubectl get nodes
 kubectl apply -f k8s/deployment.yaml
